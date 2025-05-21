@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>intermediate</name>
+			<place id="105" color="application">
+				<name>application1</name>
+			</place>
+			<place id="106" color="application">
+				<name>application2</name>
+			</place>
+			<place id="107" color="application">
+				<name>application3</name>
+			</place>
+			<place id="108" color="application">
+				<name>application9</name>
+			</place>
+			<place id="109" color="application">
+				<name>application21</name>
+			</place>
+			<place id="110" color="application">
+				<name>application23</name>
+			</place>
+			<place id="111" color="offer">
+				<name>offer11</name>
+			</place>
+			<place id="112" color="application">
+				<name>application7</name>
+			</place>
+			<place id="113" color="application">
+				<name>application11</name>
+			</place>
+			<place id="114" color="application">
+				<name>application13</name>
+			</place>
+			<place id="115" color="application">
+				<name>application25</name>
+			</place>
+			<place id="117" color="offer">
+				<name>offer1</name>
+			</place>
+			<place id="119" color="offer">
+				<name>offer3</name>
+			</place>
+			<place id="120" color="offer">
+				<name>offer10</name>
+			</place>
+			<place id="121" color="application">
+				<name>application6</name>
+			</place>
+			<place id="122" color="application">
+				<name>application14</name>
+			</place>
+			<place id="123" color="offer">
+				<name>offer8</name>
+			</place>
+			<place id="124" color="application">
+				<name>application16</name>
+			</place>
+			<place id="125" color="application">
+				<name>application17</name>
+			</place>
+			<place id="126" color="application">
+				<name>application27</name>
+			</place>
+			<place id="127" color="offer">
+				<name>offer2</name>
+			</place>
+			<place id="128" color="offer">
+				<name>offer4</name>
+			</place>
+			<place id="129" color="application">
+				<name>application8</name>
+			</place>
+			<place id="131" color="application">
+				<name>application10</name>
+			</place>
+			<place id="132" color="application">
+				<name>application22</name>
+			</place>
+			<place id="133" color="application">
+				<name>application24</name>
+			</place>
+			<place id="134" color="offer">
+				<name>offer5</name>
+			</place>
+			<place id="135" color="offer">
+				<name>offer9</name>
+			</place>
+			<place id="136" color="application">
+				<name>application5</name>
+			</place>
+			<place id="137" color="application">
+				<name>application15</name>
+			</place>
+			<place id="138" color="application">
+				<name>application18</name>
+			</place>
+			<place id="139" color="application">
+				<name>application26</name>
+			</place>
+			<place id="140" color="offer">
+				<name>offer6</name>
+			</place>
+			<place id="142" color="offer">
+				<name>offer7</name>
+			</place>
+			<place id="143" color="application">
+				<name>application4</name>
+			</place>
+			<place id="144" color="application">
+				<name>application12</name>
+			</place>
+			<place id="145" color="application">
+				<name>application19</name>
+			</place>
+			<place id="146" color="application">
+				<name>application20</name>
+			</place>
+			<place id="209" color="offer,application">
+				<name>Plink offer-application</name>
+			</place>
+			<place id="210" color="offer">
+				<name>Pb offer</name>
+			</place>
+			<place id="211" color="application">
+				<name>Pb application</name>
+			</place>
+			<place id="212" color="offer">
+				<name>Pa offer</name>
+			</place>
+			<place id="213" color="application">
+				<name>Pa application</name>
+			</place>
+			<transition id="116" invisible="true">
+				<name>consume application</name>
+			</transition>
+			<transition id="118" invisible="true">
+				<name>consume offer</name>
+			</transition>
+			<transition id="130" invisible="true">
+				<name>create application</name>
+			</transition>
+			<transition id="141" invisible="true">
+				<name>create offer</name>
+			</transition>
+			<transition id="147">
+				<name>Validate</name>
+			</transition>
+			<transition id="148" invisible="true">
+				<name>b2291a1b-2437-48e6-803c-b79a8853ffb1</name>
+			</transition>
+			<transition id="149">
+				<name>Accept offer</name>
+			</transition>
+			<transition id="150">
+				<name>Handle leads</name>
+			</transition>
+			<transition id="151" invisible="true">
+				<name>0df638f9-3f3a-4594-83ed-f7c9cdd4b3fe</name>
+			</transition>
+			<transition id="152" invisible="true">
+				<name>37d54a19-8926-4da5-83be-d52d5a4a2466</name>
+			</transition>
+			<transition id="153">
+				<name>Return</name>
+			</transition>
+			<transition id="154" invisible="true">
+				<name>52d52578-21db-4773-b1a0-d43ce224e630</name>
+			</transition>
+			<transition id="155" invisible="true">
+				<name>1023f8f0-930d-4a55-8472-9fda89311cff</name>
+			</transition>
+			<transition id="156" invisible="true">
+				<name>2564dda4-e7e9-4ef9-9cf3-2d7203783f8c</name>
+			</transition>
+			<transition id="157" invisible="true">
+				<name>9a2dd28a-eb1d-49f2-894d-c54b09faaf38</name>
+			</transition>
+			<transition id="158">
+				<name>Call</name>
+			</transition>
+			<transition id="159" invisible="true">
+				<name>eb849303-62cd-43ff-a19f-ebc55eb4e0b2</name>
+			</transition>
+			<transition id="160" invisible="true">
+				<name>de23e0de-877c-4db9-95f6-cdb1525db23c</name>
+			</transition>
+			<transition id="161" invisible="true">
+				<name>066b8bae-5cf1-4633-a4bb-e71d7098a897</name>
+			</transition>
+			<transition id="162" invisible="true">
+				<name>c6ffa7e6-ffd2-43fd-bd4d-7e6b342ba89b</name>
+			</transition>
+			<transition id="163">
+				<name>Send (online)</name>
+			</transition>
+			<transition id="164">
+				<name>Submit</name>
+			</transition>
+			<transition id="165">
+				<name>Refuse offer</name>
+			</transition>
+			<transition id="166">
+				<name>Pending</name>
+			</transition>
+			<transition id="167" invisible="true">
+				<name>3bc20e04-db50-4440-a2a4-23cdd669dcb8</name>
+			</transition>
+			<transition id="168" invisible="true">
+				<name>e3edc018-f543-4028-b21f-26051b7478d0</name>
+			</transition>
+			<transition id="169" invisible="true">
+				<name>03f35493-acf7-44a0-bc2c-7104b2f82e97</name>
+			</transition>
+			<transition id="170">
+				<name>Cancel offer</name>
+			</transition>
+			<transition id="171" invisible="true">
+				<name>75a6dd19-58ad-4225-9323-7dd782b73763</name>
+			</transition>
+			<transition id="172" invisible="true">
+				<name>9aa44ac5-dce5-4252-b6c2-a7b4827cb270</name>
+			</transition>
+			<transition id="173" invisible="true">
+				<name>bafc1dda-5fc9-4e00-b0f7-aadfa4f84298</name>
+			</transition>
+			<transition id="174" invisible="true">
+				<name>dd4d99c3-ba7a-4d67-b7ca-9a2dae2f3185</name>
+			</transition>
+			<transition id="175" invisible="true">
+				<name>ba0cfe36-8821-45c8-be00-5d1509ade5ba</name>
+			</transition>
+			<transition id="176" invisible="true">
+				<name>5c11c480-7b51-4742-bcbc-2e86263ff21f</name>
+			</transition>
+			<transition id="177">
+				<name>Shorten completion</name>
+			</transition>
+			<transition id="178" invisible="true">
+				<name>89b5644d-61e3-49ea-9694-e914f7b162c9</name>
+			</transition>
+			<transition id="179">
+				<name>Create offer</name>
+			</transition>
+			<transition id="180">
+				<name>Accept</name>
+			</transition>
+			<transition id="181" invisible="true">
+				<name>bc16959b-83eb-4ac7-afa7-f491c218e770</name>
+			</transition>
+			<transition id="182" invisible="true">
+				<name>5d5f1357-155b-41a6-8ece-e3ab43030be5</name>
+			</transition>
+			<transition id="183" invisible="true">
+				<name>a62cab9f-93b1-42fd-8079-c85c67603dcc</name>
+			</transition>
+			<transition id="184" invisible="true">
+				<name>98c3a8da-3ebc-45cb-a910-060e36e9c93c</name>
+			</transition>
+			<transition id="185" invisible="true">
+				<name>678a45aa-8ef9-45ae-a284-ee513826e73a</name>
+			</transition>
+			<transition id="186" invisible="true">
+				<name>8a97f608-27a9-4bc6-85a8-89d5f8715e9d</name>
+			</transition>
+			<transition id="187">
+				<name>Call incomplete files</name>
+			</transition>
+			<transition id="188" invisible="true">
+				<name>fc427a30-4edb-48ed-a06c-62d1de949db7</name>
+			</transition>
+			<transition id="189" invisible="true">
+				<name>08f0dec0-c530-4675-b2b5-fa7d4f3fa022</name>
+			</transition>
+			<transition id="190">
+				<name>Send (mail and online)</name>
+			</transition>
+			<transition id="191" invisible="true">
+				<name>fd049407-bd41-4461-bfef-54d9216e21fd</name>
+			</transition>
+			<transition id="192">
+				<name>Assess potential fraud</name>
+			</transition>
+			<transition id="193">
+				<name>Create application</name>
+			</transition>
+			<transition id="194">
+				<name>Cancel application</name>
+			</transition>
+			<transition id="195" invisible="true">
+				<name>21ed2492-17da-4d25-9f4f-9d1b1e2c8feb</name>
+			</transition>
+			<transition id="196" invisible="true">
+				<name>c2f403b2-56a4-4f14-b39b-078d08732949</name>
+			</transition>
+			<transition id="197" invisible="true">
+				<name>feaee4a2-66a7-482e-960d-3642dc1e6e74</name>
+			</transition>
+			<transition id="198" invisible="true">
+				<name>f1eb47fe-b3be-43d3-96c1-574e971e1a6c</name>
+			</transition>
+			<transition id="199" invisible="true">
+				<name>67bc89a0-8ea0-41f3-ad48-4e58d618c727</name>
+			</transition>
+			<transition id="200" invisible="true">
+				<name>e52301a8-6d57-45e8-88a3-c5dfa2b2e9aa</name>
+			</transition>
+			<transition id="201" invisible="true">
+				<name>af9aaa5b-486e-4086-bca8-ab0c911712ba</name>
+			</transition>
+			<transition id="202">
+				<name>Complete</name>
+			</transition>
+			<transition id="203" invisible="true">
+				<name>7c25cc6a-4c71-46aa-9562-1271c9ffd33f</name>
+			</transition>
+			<transition id="204">
+				<name>Deny</name>
+			</transition>
+			<transition id="205" invisible="true">
+				<name>8695c9bd-c26f-45bc-b4cc-b5f9e0a53f3b</name>
+			</transition>
+			<transition id="206" invisible="true">
+				<name>a9691853-2b81-4e4c-9200-4143938d882b</name>
+			</transition>
+			<transition id="207" invisible="true">
+				<name>afaf1875-3cc5-43fe-b8a4-93b9e8554263</name>
+			</transition>
+			<transition id="208" invisible="true">
+				<name>971d954a-da7a-4c35-9757-34816d5ebd82</name>
+			</transition>
+			<transition id="214">
+				<name>Tlink offer-application</name>
+			</transition>
+			<transition id="215" invisible="true">
+				<name>Ti offer</name>
+			</transition>
+			<transition id="216" invisible="true">
+				<name>Ti application</name>
+			</transition>
+			<arc source="115" target="116" inscription="a:application"/>
+			<arc source="117" target="118" inscription="o:offer"/>
+			<arc source="130" target="129" inscription="a:application"/>
+			<arc source="141" target="140" inscription="o:offer"/>
+			<arc source="202" target="146" inscription="a:application"/>
+			<arc source="175" target="139" inscription="a:application"/>
+			<arc source="171" target="138" inscription="a:application"/>
+			<arc source="136" target="207" inscription="a:application"/>
+			<arc source="142" target="190" inscription="o:offer"/>
+			<arc source="168" target="110" inscription="a:application"/>
+			<arc source="109" target="192" inscription="a:application"/>
+			<arc source="183" target="124" inscription="a:application"/>
+			<arc source="134" target="174" inscription="o:offer"/>
+			<arc source="161" target="109" inscription="a:application"/>
+			<arc source="122" target="186" inscription="a:application"/>
+			<arc source="133" target="171" inscription="a:application"/>
+			<arc source="188" target="137" inscription="a:application"/>
+			<arc source="145" target="195" inscription="a:application"/>
+			<arc source="173" target="132" inscription="a:application"/>
+			<arc source="142" target="163" inscription="o:offer"/>
+			<arc source="123" target="170" inscription="o:offer"/>
+			<arc source="181" target="106" inscription="a:application"/>
+			<arc source="113" target="178" inscription="a:application"/>
+			<arc source="149" target="121" inscription="a:application"/>
+			<arc source="107" target="183" inscription="a:application"/>
+			<arc source="111" target="162" inscription="o:offer"/>
+			<arc source="110" target="147" inscription="a:application"/>
+			<arc source="165" target="136" inscription="a:application"/>
+			<arc source="206" target="137" inscription="a:application"/>
+			<arc source="112" target="203" inscription="a:application"/>
+			<arc source="106" target="205" inscription="a:application"/>
+			<arc source="153" target="134" inscription="o:offer"/>
+			<arc source="147" target="138" inscription="a:application"/>
+			<arc source="164" target="122" inscription="a:application"/>
+			<arc source="194" target="145" inscription="a:application"/>
+			<arc source="193" target="108" inscription="a:application"/>
+			<arc source="180" target="144" inscription="a:application"/>
+			<arc source="119" target="189" inscription="o:offer"/>
+			<arc source="134" target="191" inscription="o:offer"/>
+			<arc source="172" target="131" inscription="a:application"/>
+			<arc source="160" target="122" inscription="a:application"/>
+			<arc source="146" target="184" inscription="a:application"/>
+			<arc source="112" target="199" inscription="a:application"/>
+			<arc source="207" target="114" inscription="a:application"/>
+			<arc source="132" target="201" inscription="a:application"/>
+			<arc source="195" target="132" inscription="a:application"/>
+			<arc source="159" target="112" inscription="a:application"/>
+			<arc source="205" target="115" inscription="a:application"/>
+			<arc source="128" target="149" inscription="o:offer"/>
+			<arc source="198" target="123" inscription="o:offer"/>
+			<arc source="167" target="143" inscription="a:application"/>
+			<arc source="179" target="138" inscription="a:application"/>
+			<arc source="107" target="161" inscription="a:application"/>
+			<arc source="113" target="172" inscription="a:application"/>
+			<arc source="151" target="143" inscription="a:application"/>
+			<arc source="108" target="160" inscription="a:application"/>
+			<arc source="144" target="205" inscription="a:application"/>
+			<arc source="137" target="197" inscription="a:application"/>
+			<arc source="137" target="187" inscription="a:application"/>
+			<arc source="158" target="126" inscription="a:application"/>
+			<arc source="128" target="154" inscription="o:offer"/>
+			<arc source="126" target="168" inscription="a:application"/>
+			<arc source="139" target="151" inscription="a:application"/>
+			<arc source="201" target="139" inscription="a:application"/>
+			<arc source="166" target="145" inscription="a:application"/>
+			<arc source="139" target="156" inscription="a:application"/>
+			<arc source="163" target="127" inscription="o:offer"/>
+			<arc source="170" target="145" inscription="a:application"/>
+			<arc source="178" target="107" inscription="a:application"/>
+			<arc source="157" target="138" inscription="a:application"/>
+			<arc source="200" target="125" inscription="a:application"/>
+			<arc source="143" target="158" inscription="a:application"/>
+			<arc source="106" target="159" inscription="a:application"/>
+			<arc source="158" target="134" inscription="o:offer"/>
+			<arc source="196" target="114" inscription="a:application"/>
+			<arc source="185" target="109" inscription="a:application"/>
+			<arc source="194" target="134" inscription="O:offer"/>
+			<arc source="129" target="193" inscription="a:application"/>
+			<arc source="146" target="185" inscription="a:application"/>
+			<arc source="177" target="125" inscription="a:application"/>
+			<arc source="109" target="200" inscription="a:application"/>
+			<arc source="125" target="148" inscription="a:application"/>
+			<arc source="179" target="142" inscription="o:offer"/>
+			<arc source="121" target="166" inscription="a:application"/>
+			<arc source="184" target="124" inscription="a:application"/>
+			<arc source="131" target="150" inscription="a:application"/>
+			<arc source="137" target="194" inscription="a:application"/>
+			<arc source="137" target="149" inscription="a:application"/>
+			<arc source="105" target="180" inscription="a:application"/>
+			<arc source="155" target="135" inscription="o:offer"/>
+			<arc source="156" target="110" inscription="a:application"/>
+			<arc source="197" target="121" inscription="a:application"/>
+			<arc source="203" target="107" inscription="a:application"/>
+			<arc source="145" target="206" inscription="a:application"/>
+			<arc source="187" target="145" inscription="a:application"/>
+			<arc source="189" target="117" inscription="o:offer"/>
+			<arc source="186" target="105" inscription="a:application"/>
+			<arc source="121" target="170" inscription="a:application"/>
+			<arc source="110" target="179" inscription="a:application"/>
+			<arc source="140" target="179" inscription="o:offer"/>
+			<arc source="170" target="134" inscription="o:offer"/>
+			<arc source="176" target="138" inscription="a:application"/>
+			<arc source="110" target="176" inscription="a:application"/>
+			<arc source="123" target="158" inscription="o:offer"/>
+			<arc source="123" target="194" inscription="O:offer"/>
+			<arc source="138" target="173" inscription="a:application"/>
+			<arc source="192" target="125" inscription="a:application"/>
+			<arc source="138" target="188" inscription="a:application"/>
+			<arc source="114" target="165" inscription="a:application"/>
+			<arc source="169" target="128" inscription="o:offer"/>
+			<arc source="128" target="155" inscription="o:offer"/>
+			<arc source="123" target="153" inscription="o:offer"/>
+			<arc source="154" target="119" inscription="o:offer"/>
+			<arc source="162" target="120" inscription="o:offer"/>
+			<arc source="127" target="169" inscription="o:offer"/>
+			<arc source="108" target="164" inscription="a:application"/>
+			<arc source="150" target="113" inscription="a:application"/>
+			<arc source="186" target="112" inscription="a:application"/>
+			<arc source="152" target="135" inscription="o:offer"/>
+			<arc source="174" target="123" inscription="o:offer"/>
+			<arc source="199" target="131" inscription="a:application"/>
+			<arc source="110" target="204" inscription="a:application"/>
+			<arc source="191" target="128" inscription="o:offer"/>
+			<arc source="208" target="127" inscription="o:offer"/>
+			<arc source="126" target="167" inscription="a:application"/>
+			<arc source="132" target="181" inscription="a:application"/>
+			<arc source="127" target="198" inscription="o:offer"/>
+			<arc source="204" target="111" inscription="O:offer"/>
+			<arc source="165" target="120" inscription="o:offer"/>
+			<arc source="109" target="177" inscription="a:application"/>
+			<arc source="204" target="133" inscription="a:application"/>
+			<arc source="124" target="202" inscription="a:application"/>
+			<arc source="190" target="127" inscription="o:offer"/>
+			<arc source="120" target="152" inscription="o:offer"/>
+			<arc source="135" target="204" inscription="O:offer"/>
+			<arc source="120" target="182" inscription="o:offer"/>
+			<arc source="182" target="119" inscription="o:offer"/>
+			<arc source="148" target="106" inscription="a:application"/>
+			<arc source="136" target="157" inscription="a:application"/>
+			<arc source="149" target="119" inscription="o:offer"/>
+			<arc source="142" target="208" inscription="o:offer"/>
+			<arc source="125" target="175" inscription="a:application"/>
+			<arc source="133" target="196" inscription="a:application"/>
+			<arc source="111" target="165" inscription="o:offer"/>
+			<arc source="215" target="210" inscription="nu_o:offer"/>
+			<arc source="216" target="211" inscription="nu_a:application"/>
+			<arc source="210" target="214" inscription="O:offer"/>
+			<arc source="211" target="214" inscription="a:application"/>
+			<arc source="214" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="118" inscription="o:offer,a:application"/>
+			<arc source="214" target="212" inscription="O:offer"/>
+			<arc source="214" target="213" inscription="a:application"/>
+			<arc source="213" target="130" inscription="a:application"/>
+			<arc source="212" target="141" inscription="o:offer"/>
+			<arc source="209" target="149" inscription="O:offer,a:application"/>
+			<arc source="149" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="158" inscription="O:offer,a:application"/>
+			<arc source="158" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="165" inscription="O:offer,a:application"/>
+			<arc source="165" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="170" inscription="O:offer,a:application"/>
+			<arc source="170" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="179" inscription="O:offer,a:application"/>
+			<arc source="179" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="194" inscription="O:offer,a:application"/>
+			<arc source="194" target="209" inscription="O:offer,a:application"/>
+			<arc source="209" target="204" inscription="O:offer,a:application"/>
+			<arc source="204" target="209" inscription="O:offer,a:application"/>
+		</page>
+	</net>
+</pnml>

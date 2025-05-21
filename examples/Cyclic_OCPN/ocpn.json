@@ -1,0 +1,111 @@
+{
+    "name": "Simple Cyclic OCPN",
+    "places": [
+        {
+            "name": "o1",
+            "objectType": "order",
+            "initial": true,
+            "final": false
+        },
+        {
+            "name": "o2",
+            "objectType": "order",
+            "initial": false,
+            "final": true
+        },
+        {
+            "name": "i1",
+            "objectType": "item",
+            "initial": true,
+            "final": true
+        },
+        {
+            "name": "i2",
+            "objectType": "item",
+            "initial": false,
+            "final": false
+        }
+    ],
+    "transitions": [
+        {
+            "name": "t1",
+            "label": "Middle",
+            "properties": {
+                "cost": 5
+            },
+            "silent": false
+        },
+        {
+            "name": "t2",
+            "label": "Item Back",
+            "silent": false
+        },
+        {
+            "name": "t3",
+            "label": "Order Back",
+            "silent": false
+        }
+    ],
+    "arcs": [
+        {
+            "source": "o1",
+            "target": "t1",
+            "weight": 2,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "t1",
+            "target": "o2",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "o2",
+            "target": "t3",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "t3",
+            "target": "o1",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "i1",
+            "target": "t1",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "t1",
+            "target": "i2",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "i2",
+            "target": "t2",
+            "weight": 1,
+            "variable": false,
+            "properties": {}
+        },
+        {
+            "source": "t2",
+            "target": "i1",
+            "weight": 2,
+            "variable": false,
+            "properties": {}
+        }
+    ],
+    "properties": {
+        "creator": "Tobias Br.",
+        "version": "1.0"
+    }
+}

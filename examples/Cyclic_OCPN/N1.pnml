@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>Simple Cyclic OCPN</name>
+			<place id="217" color="order">
+				<name>o1</name>
+			</place>
+			<place id="219" color="order">
+				<name>o2</name>
+			</place>
+			<place id="221" color="item">
+				<name>i1</name>
+			</place>
+			<place id="224" color="item">
+				<name>i2</name>
+			</place>
+			<transition id="218" invisible="true">
+				<name>create order</name>
+			</transition>
+			<transition id="220" invisible="true">
+				<name>consume order</name>
+			</transition>
+			<transition id="222" invisible="true">
+				<name>create item</name>
+			</transition>
+			<transition id="223" invisible="true">
+				<name>consume item</name>
+			</transition>
+			<transition id="225">
+				<name>Middle</name>
+			</transition>
+			<transition id="226">
+				<name>Item Back</name>
+			</transition>
+			<transition id="227">
+				<name>Order Back</name>
+			</transition>
+			<arc source="218" target="217" inscription="nu_o:order"/>
+			<arc source="219" target="220" inscription="o:order"/>
+			<arc source="222" target="221" inscription="nu_i:item"/>
+			<arc source="221" target="223" inscription="i:item"/>
+			<arc source="217" target="225" inscription="o:order"/>
+			<arc source="225" target="219" inscription="o:order"/>
+			<arc source="219" target="227" inscription="o:order"/>
+			<arc source="227" target="217" inscription="o:order"/>
+			<arc source="221" target="225" inscription="i:item"/>
+			<arc source="225" target="224" inscription="i:item"/>
+			<arc source="224" target="226" inscription="i:item"/>
+			<arc source="226" target="221" inscription="i:item"/>
+		</page>
+	</net>
+</pnml>

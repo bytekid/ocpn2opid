@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>Kolloquium Example</name>
+			<place id="364" color="turq">
+				<name>1</name>
+			</place>
+			<place id="366" color="turq">
+				<name>4</name>
+			</place>
+			<place id="367" color="turq">
+				<name>2</name>
+			</place>
+			<place id="368" color="yel">
+				<name>3</name>
+			</place>
+			<place id="370" color="yel">
+				<name>5</name>
+			</place>
+			<place id="372" color="turq">
+				<name>6</name>
+			</place>
+			<place id="377" color="turq,yel">
+				<name>Plink turq-yel</name>
+			</place>
+			<place id="378" color="turq">
+				<name>Pb turq</name>
+			</place>
+			<place id="379" color="yel">
+				<name>Pb yel</name>
+			</place>
+			<place id="380" color="turq">
+				<name>Pa turq</name>
+			</place>
+			<place id="381" color="yel">
+				<name>Pa yel</name>
+			</place>
+			<place id="385" color="yel,turq">
+				<name>Plink yel-turq</name>
+			</place>
+			<place id="386" color="yel">
+				<name>Pb yel</name>
+			</place>
+			<place id="387" color="turq">
+				<name>Pb turq</name>
+			</place>
+			<place id="388" color="yel">
+				<name>Pa yel</name>
+			</place>
+			<place id="389" color="turq">
+				<name>Pa turq</name>
+			</place>
+			<transition id="365" invisible="true">
+				<name>create turq</name>
+			</transition>
+			<transition id="369" invisible="true">
+				<name>create yel</name>
+			</transition>
+			<transition id="371" invisible="true">
+				<name>consume yel</name>
+			</transition>
+			<transition id="373" invisible="true">
+				<name>consume turq</name>
+			</transition>
+			<transition id="374">
+				<name>t1</name>
+			</transition>
+			<transition id="375">
+				<name>t2</name>
+			</transition>
+			<transition id="376">
+				<name>t3</name>
+			</transition>
+			<transition id="382">
+				<name>Tlink turq-yel</name>
+			</transition>
+			<transition id="383" invisible="true">
+				<name>Ti turq</name>
+			</transition>
+			<transition id="384" invisible="true">
+				<name>Ti yel</name>
+			</transition>
+			<transition id="390">
+				<name>Tlink yel-turq</name>
+			</transition>
+			<transition id="391" invisible="true">
+				<name>Ti yel</name>
+			</transition>
+			<transition id="392" invisible="true">
+				<name>Ti turq</name>
+			</transition>
+			<arc source="365" target="364" inscription="t:turq"/>
+			<arc source="369" target="368" inscription="y:yel"/>
+			<arc source="370" target="371" inscription="y:yel"/>
+			<arc source="372" target="373" inscription="t:turq"/>
+			<arc source="364" target="374" inscription="t:turq"/>
+			<arc source="374" target="366" inscription="t:turq"/>
+			<arc source="366" target="375" inscription="t:turq"/>
+			<arc source="375" target="367" inscription="t:turq"/>
+			<arc source="367" target="376" inscription="t:turq"/>
+			<arc source="376" target="366" inscription="t:turq"/>
+			<arc source="368" target="376" inscription="y:yel"/>
+			<arc source="376" target="370" inscription="y:yel"/>
+			<arc source="376" target="372" inscription="t:turq"/>
+			<arc source="383" target="378" inscription="t:turq"/>
+			<arc source="384" target="379" inscription="y:yel"/>
+			<arc source="378" target="382" inscription="T:turq"/>
+			<arc source="379" target="382" inscription="y:yel"/>
+			<arc source="382" target="377" inscription="T:turq,y:yel"/>
+			<arc source="377" target="373" inscription="t:turq,y:yel"/>
+			<arc source="382" target="380" inscription="T:turq"/>
+			<arc source="382" target="381" inscription="y:yel"/>
+			<arc source="381" target="369" inscription="y:yel"/>
+			<arc source="380" target="365" inscription="t:turq"/>
+			<arc source="377" target="376" inscription="T:turq,y:yel"/>
+			<arc source="376" target="377" inscription="T:turq,y:yel"/>
+			<arc source="391" target="386" inscription="nu_y:yel"/>
+			<arc source="392" target="387" inscription="nu_t:turq"/>
+			<arc source="386" target="390" inscription="Y:yel"/>
+			<arc source="387" target="390" inscription="t:turq"/>
+			<arc source="390" target="385" inscription="Y:yel,t:turq"/>
+			<arc source="385" target="371" inscription="y:yel,t:turq"/>
+			<arc source="390" target="388" inscription="Y:yel"/>
+			<arc source="390" target="389" inscription="t:turq"/>
+			<arc source="389" target="383" inscription="t:turq"/>
+			<arc source="388" target="384" inscription="y:yel"/>
+			<arc source="385" target="373" inscription="Y:yel,t:turq"/>
+			<arc source="373" target="385" inscription="Y:yel,t:turq"/>
+			<arc source="385" target="376" inscription="Y:yel,t:turq"/>
+			<arc source="376" target="385" inscription="Y:yel,t:turq"/>
+			<arc source="385" target="382" inscription="Y:yel,t:turq"/>
+			<arc source="382" target="385" inscription="Y:yel,t:turq"/>
+		</page>
+	</net>
+</pnml>

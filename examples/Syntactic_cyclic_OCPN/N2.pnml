@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>Example Petri Net</name>
+			<place id="657" color="type1">
+				<name>p1</name>
+			</place>
+			<place id="659" color="type1">
+				<name>p2</name>
+			</place>
+			<place id="660" color="type1">
+				<name>p3</name>
+			</place>
+			<transition id="658" invisible="true">
+				<name>create type1</name>
+			</transition>
+			<transition id="661" invisible="true">
+				<name>consume type1</name>
+			</transition>
+			<transition id="662">
+				<name>Start</name>
+			</transition>
+			<transition id="663">
+				<name>Process</name>
+			</transition>
+			<transition id="664">
+				<name>End</name>
+			</transition>
+			<arc source="658" target="657" inscription="nu_t:type1"/>
+			<arc source="660" target="661" inscription="t:type1"/>
+			<arc source="657" target="662" inscription="t:type1"/>
+			<arc source="662" target="659" inscription="t:type1"/>
+			<arc source="659" target="663" inscription="t:type1"/>
+			<arc source="663" target="660" inscription="t:type1"/>
+			<arc source="660" target="664" inscription="t:type1"/>
+			<arc source="664" target="657" inscription="t:type1"/>
+		</page>
+	</net>
+</pnml>

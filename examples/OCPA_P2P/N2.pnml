@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>OCPA P2P Normal OCPN Example</name>
+			<place id="425" color="order">
+				<name>order1</name>
+			</place>
+			<place id="427" color="order">
+				<name>order2</name>
+			</place>
+			<place id="428" color="order">
+				<name>order3</name>
+			</place>
+			<place id="429" color="order">
+				<name>order4</name>
+			</place>
+			<place id="430" color="order">
+				<name>order5</name>
+			</place>
+			<place id="432" color="item">
+				<name>item1</name>
+			</place>
+			<place id="434" color="item">
+				<name>item2</name>
+			</place>
+			<place id="435" color="item">
+				<name>item3</name>
+			</place>
+			<place id="436" color="item">
+				<name>item4</name>
+			</place>
+			<place id="437" color="item">
+				<name>item5</name>
+			</place>
+			<place id="438" color="item">
+				<name>item6</name>
+			</place>
+			<place id="439" color="item">
+				<name>item7</name>
+			</place>
+			<place id="441" color="delivery">
+				<name>delivery1</name>
+			</place>
+			<place id="443" color="delivery">
+				<name>delivery2</name>
+			</place>
+			<place id="444" color="delivery">
+				<name>delivery3</name>
+			</place>
+			<place id="445" color="delivery">
+				<name>delivery4</name>
+			</place>
+			<place id="446" color="delivery">
+				<name>delivery5</name>
+			</place>
+			<place id="457" color="item,order">
+				<name>Plink item-order</name>
+			</place>
+			<place id="458" color="item">
+				<name>Pb item</name>
+			</place>
+			<place id="459" color="order">
+				<name>Pb order</name>
+			</place>
+			<place id="460" color="item">
+				<name>Pa item</name>
+			</place>
+			<place id="461" color="order">
+				<name>Pa order</name>
+			</place>
+			<transition id="426" invisible="true">
+				<name>create order</name>
+			</transition>
+			<transition id="431" invisible="true">
+				<name>consume order</name>
+			</transition>
+			<transition id="433" invisible="true">
+				<name>create item</name>
+			</transition>
+			<transition id="440" invisible="true">
+				<name>consume item</name>
+			</transition>
+			<transition id="442" invisible="true">
+				<name>create delivery</name>
+			</transition>
+			<transition id="447" invisible="true">
+				<name>consume delivery</name>
+			</transition>
+			<transition id="448">
+				<name>Place Order</name>
+			</transition>
+			<transition id="449">
+				<name>Confirm Order</name>
+			</transition>
+			<transition id="450">
+				<name>Pick Item</name>
+			</transition>
+			<transition id="451">
+				<name>Load Cargo</name>
+			</transition>
+			<transition id="452">
+				<name>Fuel Car</name>
+			</transition>
+			<transition id="453">
+				<name>Start Route</name>
+			</transition>
+			<transition id="454">
+				<name>End Route</name>
+			</transition>
+			<transition id="455">
+				<name>Payment Reminder</name>
+			</transition>
+			<transition id="456">
+				<name>Pay Order</name>
+			</transition>
+			<transition id="462">
+				<name>Tlink item-order</name>
+			</transition>
+			<transition id="463" invisible="true">
+				<name>Ti item</name>
+			</transition>
+			<transition id="464" invisible="true">
+				<name>Ti order</name>
+			</transition>
+			<arc source="426" target="425" inscription="o:order"/>
+			<arc source="430" target="431" inscription="o:order"/>
+			<arc source="433" target="432" inscription="i:item"/>
+			<arc source="439" target="440" inscription="i:item"/>
+			<arc source="442" target="441" inscription="nu_d:delivery"/>
+			<arc source="446" target="447" inscription="d:delivery"/>
+			<arc source="425" target="448" inscription="o:order"/>
+			<arc source="432" target="448" inscription="I:item"/>
+			<arc source="448" target="427" inscription="o:order"/>
+			<arc source="448" target="434" inscription="I:item"/>
+			<arc source="427" target="449" inscription="o:order"/>
+			<arc source="434" target="449" inscription="I:item"/>
+			<arc source="449" target="428" inscription="o:order"/>
+			<arc source="449" target="435" inscription="I:item"/>
+			<arc source="428" target="455" inscription="o:order"/>
+			<arc source="455" target="429" inscription="o:order"/>
+			<arc source="429" target="456" inscription="o:order"/>
+			<arc source="456" target="430" inscription="o:order"/>
+			<arc source="435" target="450" inscription="i:item"/>
+			<arc source="450" target="436" inscription="i:item"/>
+			<arc source="436" target="451" inscription="I:item"/>
+			<arc source="441" target="452" inscription="d:delivery"/>
+			<arc source="452" target="443" inscription="d:delivery"/>
+			<arc source="443" target="451" inscription="d:delivery"/>
+			<arc source="451" target="444" inscription="d:delivery"/>
+			<arc source="451" target="437" inscription="I:item"/>
+			<arc source="444" target="453" inscription="d:delivery"/>
+			<arc source="437" target="453" inscription="I:item"/>
+			<arc source="453" target="445" inscription="d:delivery"/>
+			<arc source="453" target="438" inscription="I:item"/>
+			<arc source="445" target="454" inscription="d:delivery"/>
+			<arc source="438" target="454" inscription="I:item"/>
+			<arc source="454" target="446" inscription="d:delivery"/>
+			<arc source="454" target="439" inscription="I:item"/>
+			<arc source="463" target="458" inscription="nu_i:item"/>
+			<arc source="464" target="459" inscription="nu_o:order"/>
+			<arc source="458" target="462" inscription="I:item"/>
+			<arc source="459" target="462" inscription="o:order"/>
+			<arc source="462" target="457" inscription="I:item,o:order"/>
+			<arc source="457" target="440" inscription="i:item,o:order"/>
+			<arc source="462" target="460" inscription="I:item"/>
+			<arc source="462" target="461" inscription="o:order"/>
+			<arc source="461" target="426" inscription="o:order"/>
+			<arc source="460" target="433" inscription="i:item"/>
+			<arc source="457" target="448" inscription="I:item,o:order"/>
+			<arc source="448" target="457" inscription="I:item,o:order"/>
+			<arc source="457" target="449" inscription="I:item,o:order"/>
+			<arc source="449" target="457" inscription="I:item,o:order"/>
+		</page>
+	</net>
+</pnml>

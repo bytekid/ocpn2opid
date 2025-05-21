@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>exported-p2p-normal</name>
+			<place id="291" color="MATERIAL">
+				<name>MATERIAL1</name>
+			</place>
+			<place id="293" color="MATERIAL">
+				<name>MATERIAL2</name>
+			</place>
+			<place id="295" color="MATERIAL">
+				<name>MATERIAL5</name>
+			</place>
+			<place id="296" color="MATERIAL">
+				<name>MATERIAL8</name>
+			</place>
+			<place id="297" color="PURCHORD">
+				<name>PURCHORD5</name>
+			</place>
+			<place id="299" color="PURCHORD">
+				<name>PURCHORD1</name>
+			</place>
+			<place id="301" color="PURCHORD">
+				<name>PURCHORD2</name>
+			</place>
+			<place id="302" color="GDSRCPT">
+				<name>GDSRCPT3</name>
+			</place>
+			<place id="304" color="PURCHORD">
+				<name>PURCHORD6</name>
+			</place>
+			<place id="305" color="MATERIAL">
+				<name>MATERIAL3</name>
+			</place>
+			<place id="306" color="MATERIAL">
+				<name>MATERIAL7</name>
+			</place>
+			<place id="307" color="GDSRCPT">
+				<name>GDSRCPT1</name>
+			</place>
+			<place id="309" color="GDSRCPT">
+				<name>GDSRCPT4</name>
+			</place>
+			<place id="310" color="INVOICE">
+				<name>INVOICE1</name>
+			</place>
+			<place id="312" color="INVOICE">
+				<name>INVOICE2</name>
+			</place>
+			<place id="314" color="MATERIAL">
+				<name>MATERIAL6</name>
+			</place>
+			<place id="315" color="MATERIAL">
+				<name>MATERIAL9</name>
+			</place>
+			<place id="316" color="PURCHREQ">
+				<name>PURCHREQ1</name>
+			</place>
+			<place id="318" color="PURCHREQ">
+				<name>PURCHREQ2</name>
+			</place>
+			<place id="319" color="PURCHREQ">
+				<name>PURCHREQ3</name>
+			</place>
+			<place id="321" color="PURCHORD">
+				<name>PURCHORD3</name>
+			</place>
+			<place id="322" color="PURCHORD">
+				<name>PURCHORD4</name>
+			</place>
+			<place id="323" color="MATERIAL">
+				<name>MATERIAL4</name>
+			</place>
+			<place id="324" color="GDSRCPT">
+				<name>GDSRCPT2</name>
+			</place>
+			<place id="325" color="INVOICE">
+				<name>INVOICE3</name>
+			</place>
+			<place id="335" color="MATERIAL,PURCHREQ">
+				<name>Plink MATERIAL-PURCHREQ</name>
+			</place>
+			<place id="336" color="MATERIAL">
+				<name>Pb MATERIAL</name>
+			</place>
+			<place id="337" color="PURCHREQ">
+				<name>Pb PURCHREQ</name>
+			</place>
+			<place id="338" color="MATERIAL">
+				<name>Pa MATERIAL</name>
+			</place>
+			<place id="339" color="PURCHREQ">
+				<name>Pa PURCHREQ</name>
+			</place>
+			<place id="343" color="MATERIAL,PURCHORD">
+				<name>Plink MATERIAL-PURCHORD</name>
+			</place>
+			<place id="344" color="MATERIAL">
+				<name>Pb MATERIAL</name>
+			</place>
+			<place id="345" color="PURCHORD">
+				<name>Pb PURCHORD</name>
+			</place>
+			<place id="346" color="MATERIAL">
+				<name>Pa MATERIAL</name>
+			</place>
+			<place id="347" color="PURCHORD">
+				<name>Pa PURCHORD</name>
+			</place>
+			<transition id="292" invisible="true">
+				<name>create MATERIAL</name>
+			</transition>
+			<transition id="294" invisible="true">
+				<name>consume MATERIAL</name>
+			</transition>
+			<transition id="298" invisible="true">
+				<name>consume PURCHORD</name>
+			</transition>
+			<transition id="300" invisible="true">
+				<name>create PURCHORD</name>
+			</transition>
+			<transition id="303" invisible="true">
+				<name>consume GDSRCPT</name>
+			</transition>
+			<transition id="308" invisible="true">
+				<name>create GDSRCPT</name>
+			</transition>
+			<transition id="311" invisible="true">
+				<name>create INVOICE</name>
+			</transition>
+			<transition id="313" invisible="true">
+				<name>consume INVOICE</name>
+			</transition>
+			<transition id="317" invisible="true">
+				<name>create PURCHREQ</name>
+			</transition>
+			<transition id="320" invisible="true">
+				<name>consume PURCHREQ</name>
+			</transition>
+			<transition id="326">
+				<name>Create Purchase Order</name>
+			</transition>
+			<transition id="327">
+				<name>Create Purchase Requisition</name>
+			</transition>
+			<transition id="328">
+				<name>Issue Goods Receipt</name>
+			</transition>
+			<transition id="329">
+				<name>Receive Goods</name>
+			</transition>
+			<transition id="330">
+				<name>Plan Goods Issue</name>
+			</transition>
+			<transition id="331">
+				<name>Verify Material</name>
+			</transition>
+			<transition id="332">
+				<name>Goods Issue</name>
+			</transition>
+			<transition id="333">
+				<name>Clear Invoice</name>
+			</transition>
+			<transition id="334">
+				<name>Receive Invoice</name>
+			</transition>
+			<transition id="340">
+				<name>Tlink MATERIAL-PURCHREQ</name>
+			</transition>
+			<transition id="341" invisible="true">
+				<name>Ti MATERIAL</name>
+			</transition>
+			<transition id="342" invisible="true">
+				<name>Ti PURCHREQ</name>
+			</transition>
+			<transition id="348">
+				<name>Tlink MATERIAL-PURCHORD</name>
+			</transition>
+			<transition id="349" invisible="true">
+				<name>Ti MATERIAL</name>
+			</transition>
+			<transition id="350" invisible="true">
+				<name>Ti PURCHORD</name>
+			</transition>
+			<arc source="292" target="291" inscription="m:MATERIAL"/>
+			<arc source="293" target="294" inscription="m:MATERIAL"/>
+			<arc source="297" target="298" inscription="p:PURCHORD"/>
+			<arc source="300" target="299" inscription="p:PURCHORD"/>
+			<arc source="302" target="303" inscription="g:GDSRCPT"/>
+			<arc source="308" target="307" inscription="nu_g:GDSRCPT"/>
+			<arc source="311" target="310" inscription="nu_i:INVOICE"/>
+			<arc source="312" target="313" inscription="i:INVOICE"/>
+			<arc source="317" target="316" inscription="p:PURCHREQ"/>
+			<arc source="319" target="320" inscription="p:PURCHREQ"/>
+			<arc source="327" target="318" inscription="p:PURCHREQ"/>
+			<arc source="332" target="293" inscription="M:MATERIAL"/>
+			<arc source="315" target="332" inscription="M:MATERIAL"/>
+			<arc source="295" target="326" inscription="M:MATERIAL"/>
+			<arc source="291" target="327" inscription="M:MATERIAL"/>
+			<arc source="326" target="319" inscription="p:PURCHREQ"/>
+			<arc source="322" target="328" inscription="p:PURCHORD"/>
+			<arc source="304" target="333" inscription="p:PURCHORD"/>
+			<arc source="328" target="324" inscription="g:GDSRCPT"/>
+			<arc source="309" target="328" inscription="g:GDSRCPT"/>
+			<arc source="333" target="302" inscription="g:GDSRCPT"/>
+			<arc source="316" target="327" inscription="p:PURCHREQ"/>
+			<arc source="331" target="315" inscription="M:MATERIAL"/>
+			<arc source="305" target="328" inscription="M:MATERIAL"/>
+			<arc source="328" target="314" inscription="M:MATERIAL"/>
+			<arc source="314" target="330" inscription="M:MATERIAL"/>
+			<arc source="328" target="296" inscription="M:MATERIAL"/>
+			<arc source="306" target="332" inscription="M:MATERIAL"/>
+			<arc source="299" target="326" inscription="p:PURCHORD"/>
+			<arc source="301" target="329" inscription="p:PURCHORD"/>
+			<arc source="334" target="325" inscription="I:INVOICE"/>
+			<arc source="318" target="326" inscription="p:PURCHREQ"/>
+			<arc source="327" target="295" inscription="M:MATERIAL"/>
+			<arc source="326" target="301" inscription="p:PURCHORD"/>
+			<arc source="328" target="321" inscription="p:PURCHORD"/>
+			<arc source="334" target="304" inscription="p:PURCHORD"/>
+			<arc source="307" target="329" inscription="g:GDSRCPT"/>
+			<arc source="324" target="333" inscription="g:GDSRCPT"/>
+			<arc source="310" target="334" inscription="I:INVOICE"/>
+			<arc source="325" target="333" inscription="I:INVOICE"/>
+			<arc source="329" target="305" inscription="M:MATERIAL"/>
+			<arc source="296" target="331" inscription="M:MATERIAL"/>
+			<arc source="330" target="306" inscription="M:MATERIAL"/>
+			<arc source="323" target="329" inscription="M:MATERIAL"/>
+			<arc source="326" target="323" inscription="M:MATERIAL"/>
+			<arc source="329" target="322" inscription="p:PURCHORD"/>
+			<arc source="321" target="334" inscription="p:PURCHORD"/>
+			<arc source="333" target="297" inscription="p:PURCHORD"/>
+			<arc source="329" target="309" inscription="g:GDSRCPT"/>
+			<arc source="333" target="312" inscription="I:INVOICE"/>
+			<arc source="341" target="336" inscription="m:MATERIAL"/>
+			<arc source="342" target="337" inscription="nu_p:PURCHREQ"/>
+			<arc source="336" target="340" inscription="M:MATERIAL"/>
+			<arc source="337" target="340" inscription="p:PURCHREQ"/>
+			<arc source="340" target="335" inscription="M:MATERIAL,p:PURCHREQ"/>
+			<arc source="335" target="294" inscription="m:MATERIAL,p:PURCHREQ"/>
+			<arc source="340" target="338" inscription="M:MATERIAL"/>
+			<arc source="340" target="339" inscription="p:PURCHREQ"/>
+			<arc source="339" target="317" inscription="p:PURCHREQ"/>
+			<arc source="338" target="292" inscription="m:MATERIAL"/>
+			<arc source="335" target="326" inscription="M:MATERIAL,p:PURCHREQ"/>
+			<arc source="326" target="335" inscription="M:MATERIAL,p:PURCHREQ"/>
+			<arc source="335" target="327" inscription="M:MATERIAL,p:PURCHREQ"/>
+			<arc source="327" target="335" inscription="M:MATERIAL,p:PURCHREQ"/>
+			<arc source="349" target="344" inscription="nu_m:MATERIAL"/>
+			<arc source="350" target="345" inscription="nu_p:PURCHORD"/>
+			<arc source="344" target="348" inscription="M:MATERIAL"/>
+			<arc source="345" target="348" inscription="p:PURCHORD"/>
+			<arc source="348" target="343" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="343" target="294" inscription="m:MATERIAL,p:PURCHORD"/>
+			<arc source="348" target="346" inscription="M:MATERIAL"/>
+			<arc source="348" target="347" inscription="p:PURCHORD"/>
+			<arc source="347" target="300" inscription="p:PURCHORD"/>
+			<arc source="346" target="341" inscription="m:MATERIAL"/>
+			<arc source="343" target="326" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="326" target="343" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="343" target="328" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="328" target="343" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="343" target="329" inscription="M:MATERIAL,p:PURCHORD"/>
+			<arc source="329" target="343" inscription="M:MATERIAL,p:PURCHORD"/>
+		</page>
+	</net>
+</pnml>

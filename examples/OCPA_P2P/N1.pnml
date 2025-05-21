@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>OCPA P2P Normal OCPN Example</name>
+			<place id="393" color="order">
+				<name>order1</name>
+			</place>
+			<place id="395" color="order">
+				<name>order2</name>
+			</place>
+			<place id="396" color="order">
+				<name>order3</name>
+			</place>
+			<place id="397" color="order">
+				<name>order4</name>
+			</place>
+			<place id="398" color="order">
+				<name>order5</name>
+			</place>
+			<place id="400" color="item">
+				<name>item1</name>
+			</place>
+			<place id="402" color="item">
+				<name>item2</name>
+			</place>
+			<place id="403" color="item">
+				<name>item3</name>
+			</place>
+			<place id="404" color="item">
+				<name>item4</name>
+			</place>
+			<place id="405" color="item">
+				<name>item5</name>
+			</place>
+			<place id="406" color="item">
+				<name>item6</name>
+			</place>
+			<place id="407" color="item">
+				<name>item7</name>
+			</place>
+			<place id="409" color="delivery">
+				<name>delivery1</name>
+			</place>
+			<place id="411" color="delivery">
+				<name>delivery2</name>
+			</place>
+			<place id="412" color="delivery">
+				<name>delivery3</name>
+			</place>
+			<place id="413" color="delivery">
+				<name>delivery4</name>
+			</place>
+			<place id="414" color="delivery">
+				<name>delivery5</name>
+			</place>
+			<transition id="394" invisible="true">
+				<name>create order</name>
+			</transition>
+			<transition id="399" invisible="true">
+				<name>consume order</name>
+			</transition>
+			<transition id="401" invisible="true">
+				<name>create item</name>
+			</transition>
+			<transition id="408" invisible="true">
+				<name>consume item</name>
+			</transition>
+			<transition id="410" invisible="true">
+				<name>create delivery</name>
+			</transition>
+			<transition id="415" invisible="true">
+				<name>consume delivery</name>
+			</transition>
+			<transition id="416">
+				<name>Place Order</name>
+			</transition>
+			<transition id="417">
+				<name>Confirm Order</name>
+			</transition>
+			<transition id="418">
+				<name>Pick Item</name>
+			</transition>
+			<transition id="419">
+				<name>Load Cargo</name>
+			</transition>
+			<transition id="420">
+				<name>Fuel Car</name>
+			</transition>
+			<transition id="421">
+				<name>Start Route</name>
+			</transition>
+			<transition id="422">
+				<name>End Route</name>
+			</transition>
+			<transition id="423">
+				<name>Payment Reminder</name>
+			</transition>
+			<transition id="424">
+				<name>Pay Order</name>
+			</transition>
+			<arc source="394" target="393" inscription="nu_o:order"/>
+			<arc source="398" target="399" inscription="o:order"/>
+			<arc source="401" target="400" inscription="nu_i:item"/>
+			<arc source="407" target="408" inscription="i:item"/>
+			<arc source="410" target="409" inscription="nu_d:delivery"/>
+			<arc source="414" target="415" inscription="d:delivery"/>
+			<arc source="393" target="416" inscription="o:order"/>
+			<arc source="400" target="416" inscription="I:item"/>
+			<arc source="416" target="395" inscription="o:order"/>
+			<arc source="416" target="402" inscription="I:item"/>
+			<arc source="395" target="417" inscription="o:order"/>
+			<arc source="402" target="417" inscription="I:item"/>
+			<arc source="417" target="396" inscription="o:order"/>
+			<arc source="417" target="403" inscription="I:item"/>
+			<arc source="396" target="423" inscription="o:order"/>
+			<arc source="423" target="397" inscription="o:order"/>
+			<arc source="397" target="424" inscription="o:order"/>
+			<arc source="424" target="398" inscription="o:order"/>
+			<arc source="403" target="418" inscription="i:item"/>
+			<arc source="418" target="404" inscription="i:item"/>
+			<arc source="404" target="419" inscription="I:item"/>
+			<arc source="409" target="420" inscription="d:delivery"/>
+			<arc source="420" target="411" inscription="d:delivery"/>
+			<arc source="411" target="419" inscription="d:delivery"/>
+			<arc source="419" target="412" inscription="d:delivery"/>
+			<arc source="419" target="405" inscription="I:item"/>
+			<arc source="412" target="421" inscription="d:delivery"/>
+			<arc source="405" target="421" inscription="I:item"/>
+			<arc source="421" target="413" inscription="d:delivery"/>
+			<arc source="421" target="406" inscription="I:item"/>
+			<arc source="413" target="422" inscription="d:delivery"/>
+			<arc source="406" target="422" inscription="I:item"/>
+			<arc source="422" target="414" inscription="d:delivery"/>
+			<arc source="422" target="407" inscription="I:item"/>
+		</page>
+	</net>
+</pnml>

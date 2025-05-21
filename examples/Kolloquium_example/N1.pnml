@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>Kolloquium Example</name>
+			<place id="351" color="turq">
+				<name>1</name>
+			</place>
+			<place id="353" color="turq">
+				<name>4</name>
+			</place>
+			<place id="354" color="turq">
+				<name>2</name>
+			</place>
+			<place id="355" color="yel">
+				<name>3</name>
+			</place>
+			<place id="357" color="yel">
+				<name>5</name>
+			</place>
+			<place id="359" color="turq">
+				<name>6</name>
+			</place>
+			<transition id="352" invisible="true">
+				<name>create turq</name>
+			</transition>
+			<transition id="356" invisible="true">
+				<name>create yel</name>
+			</transition>
+			<transition id="358" invisible="true">
+				<name>consume yel</name>
+			</transition>
+			<transition id="360" invisible="true">
+				<name>consume turq</name>
+			</transition>
+			<transition id="361">
+				<name>t1</name>
+			</transition>
+			<transition id="362">
+				<name>t2</name>
+			</transition>
+			<transition id="363">
+				<name>t3</name>
+			</transition>
+			<arc source="352" target="351" inscription="nu_t:turq"/>
+			<arc source="356" target="355" inscription="nu_y:yel"/>
+			<arc source="357" target="358" inscription="y:yel"/>
+			<arc source="359" target="360" inscription="t:turq"/>
+			<arc source="351" target="361" inscription="t:turq"/>
+			<arc source="361" target="353" inscription="t:turq"/>
+			<arc source="353" target="362" inscription="t:turq"/>
+			<arc source="362" target="354" inscription="t:turq"/>
+			<arc source="354" target="363" inscription="t:turq"/>
+			<arc source="363" target="353" inscription="t:turq"/>
+			<arc source="355" target="363" inscription="y:yel"/>
+			<arc source="363" target="357" inscription="y:yel"/>
+			<arc source="363" target="359" inscription="t:turq"/>
+		</page>
+	</net>
+</pnml>

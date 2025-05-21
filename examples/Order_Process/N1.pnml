@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>order_process</name>
+			<place id="465" color="order">
+				<name>order5</name>
+			</place>
+			<place id="466" color="item">
+				<name>item6</name>
+			</place>
+			<place id="467" color="item">
+				<name>item9</name>
+			</place>
+			<place id="468" color="delivery">
+				<name>delivery4</name>
+			</place>
+			<place id="469" color="delivery">
+				<name>delivery5</name>
+			</place>
+			<place id="471" color="order">
+				<name>order1</name>
+			</place>
+			<place id="472" color="item">
+				<name>item4</name>
+			</place>
+			<place id="473" color="item">
+				<name>item7</name>
+			</place>
+			<place id="475" color="delivery">
+				<name>delivery2</name>
+			</place>
+			<place id="476" color="order">
+				<name>order4</name>
+			</place>
+			<place id="478" color="item">
+				<name>item2</name>
+			</place>
+			<place id="479" color="delivery">
+				<name>delivery3</name>
+			</place>
+			<place id="481" color="delivery">
+				<name>delivery6</name>
+			</place>
+			<place id="482" color="order">
+				<name>order2</name>
+			</place>
+			<place id="483" color="item">
+				<name>item5</name>
+			</place>
+			<place id="484" color="delivery">
+				<name>delivery7</name>
+			</place>
+			<place id="485" color="item">
+				<name>item3</name>
+			</place>
+			<place id="486" color="delivery">
+				<name>delivery1</name>
+			</place>
+			<place id="487" color="order">
+				<name>order3</name>
+			</place>
+			<place id="488" color="order">
+				<name>order7</name>
+			</place>
+			<place id="489" color="item">
+				<name>item1</name>
+			</place>
+			<place id="491" color="item">
+				<name>item8</name>
+			</place>
+			<place id="492" color="order">
+				<name>order6</name>
+			</place>
+			<transition id="470" invisible="true">
+				<name>create delivery</name>
+			</transition>
+			<transition id="474" invisible="true">
+				<name>consume item</name>
+			</transition>
+			<transition id="477" invisible="true">
+				<name>create order</name>
+			</transition>
+			<transition id="480" invisible="true">
+				<name>consume delivery</name>
+			</transition>
+			<transition id="490" invisible="true">
+				<name>create item</name>
+			</transition>
+			<transition id="493" invisible="true">
+				<name>consume order</name>
+			</transition>
+			<transition id="494">
+				<name>Confirm Order</name>
+			</transition>
+			<transition id="495" invisible="true">
+				<name>547df706-5d1f-430a-abcf-ab5fb32e3f43</name>
+			</transition>
+			<transition id="496">
+				<name>Item out of stock</name>
+			</transition>
+			<transition id="497" invisible="true">
+				<name>23b0b155-ca1a-498b-8d77-a5080d6715c5</name>
+			</transition>
+			<transition id="498">
+				<name>Pick Item</name>
+			</transition>
+			<transition id="499">
+				<name>Load Cargo</name>
+			</transition>
+			<transition id="500">
+				<name>Start Route</name>
+			</transition>
+			<transition id="501" invisible="true">
+				<name>94107f44-7ec2-4381-90ef-9253c815a970</name>
+			</transition>
+			<transition id="502" invisible="true">
+				<name>91ad3cb5-8178-4865-b583-b5093e620520</name>
+			</transition>
+			<transition id="503">
+				<name>Payment Reminder</name>
+			</transition>
+			<transition id="504">
+				<name>Pay Order</name>
+			</transition>
+			<transition id="505" invisible="true">
+				<name>8a89b0dd-d5d5-43b2-9899-2dec4a8202d2</name>
+			</transition>
+			<transition id="506">
+				<name>Place Order</name>
+			</transition>
+			<transition id="507" invisible="true">
+				<name>1fb30873-dbf4-4018-a892-35e44897d0ac</name>
+			</transition>
+			<transition id="508">
+				<name>Reorder Item</name>
+			</transition>
+			<transition id="509">
+				<name>End Route</name>
+			</transition>
+			<transition id="510">
+				<name>Fuel Car</name>
+			</transition>
+			<arc source="470" target="469" inscription="nu_d:delivery"/>
+			<arc source="473" target="474" inscription="i:item"/>
+			<arc source="477" target="476" inscription="nu_o:order"/>
+			<arc source="479" target="480" inscription="d:delivery"/>
+			<arc source="490" target="489" inscription="nu_i:item"/>
+			<arc source="492" target="493" inscription="o:order"/>
+			<arc source="503" target="487" inscription="o:order"/>
+			<arc source="504" target="492" inscription="o:order"/>
+			<arc source="485" target="497" inscription="i:item"/>
+			<arc source="496" target="472" inscription="i:item"/>
+			<arc source="501" target="468" inscription="d:delivery"/>
+			<arc source="500" target="484" inscription="d:delivery"/>
+			<arc source="468" target="499" inscription="d:delivery"/>
+			<arc source="505" target="488" inscription="o:order"/>
+			<arc source="507" target="471" inscription="o:order"/>
+			<arc source="491" target="499" inscription="I:item"/>
+			<arc source="467" target="500" inscription="I:item"/>
+			<arc source="494" target="465" inscription="o:order"/>
+			<arc source="465" target="495" inscription="o:order"/>
+			<arc source="489" target="506" inscription="I:item"/>
+			<arc source="508" target="478" inscription="i:item"/>
+			<arc source="478" target="498" inscription="i:item"/>
+			<arc source="498" target="491" inscription="i:item"/>
+			<arc source="506" target="466" inscription="I:item"/>
+			<arc source="475" target="500" inscription="d:delivery"/>
+			<arc source="466" target="494" inscription="I:item"/>
+			<arc source="471" target="504" inscription="o:order"/>
+			<arc source="476" target="506" inscription="o:order"/>
+			<arc source="506" target="482" inscription="o:order"/>
+			<arc source="502" target="488" inscription="o:order"/>
+			<arc source="472" target="508" inscription="i:item"/>
+			<arc source="487" target="507" inscription="o:order"/>
+			<arc source="499" target="467" inscription="I:item"/>
+			<arc source="510" target="475" inscription="d:delivery"/>
+			<arc source="465" target="502" inscription="o:order"/>
+			<arc source="482" target="494" inscription="o:order"/>
+			<arc source="495" target="471" inscription="o:order"/>
+			<arc source="488" target="503" inscription="o:order"/>
+			<arc source="500" target="483" inscription="I:item"/>
+			<arc source="494" target="485" inscription="I:item"/>
+			<arc source="486" target="510" inscription="d:delivery"/>
+			<arc source="485" target="496" inscription="i:item"/>
+			<arc source="483" target="509" inscription="I:item"/>
+			<arc source="481" target="500" inscription="d:delivery"/>
+			<arc source="509" target="479" inscription="d:delivery"/>
+			<arc source="497" target="478" inscription="i:item"/>
+			<arc source="487" target="505" inscription="o:order"/>
+			<arc source="509" target="473" inscription="I:item"/>
+			<arc source="501" target="486" inscription="d:delivery"/>
+			<arc source="499" target="481" inscription="d:delivery"/>
+			<arc source="484" target="509" inscription="d:delivery"/>
+			<arc source="469" target="501" inscription="d:delivery"/>
+		</page>
+	</net>
+</pnml>

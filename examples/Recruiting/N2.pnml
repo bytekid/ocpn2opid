@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>recruiting-red</name>
+			<place id="603" color="applications">
+				<name>applications1</name>
+			</place>
+			<place id="604" color="applications">
+				<name>applications3</name>
+			</place>
+			<place id="605" color="applications">
+				<name>applications5</name>
+			</place>
+			<place id="606" color="applications">
+				<name>applications6</name>
+			</place>
+			<place id="608" color="applications">
+				<name>applications7</name>
+			</place>
+			<place id="609" color="applications">
+				<name>applications8</name>
+			</place>
+			<place id="610" color="applications">
+				<name>applications9</name>
+			</place>
+			<place id="612" color="applications">
+				<name>applications10</name>
+			</place>
+			<place id="613" color="applications">
+				<name>applications11</name>
+			</place>
+			<place id="614" color="applications">
+				<name>applications12</name>
+			</place>
+			<place id="615" color="offers">
+				<name>offers3</name>
+			</place>
+			<place id="617" color="applications">
+				<name>applications14</name>
+			</place>
+			<place id="618" color="applications">
+				<name>applications2</name>
+			</place>
+			<place id="619" color="applications">
+				<name>applications4</name>
+			</place>
+			<place id="620" color="applications">
+				<name>applications13</name>
+			</place>
+			<place id="621" color="offers">
+				<name>offers1</name>
+			</place>
+			<place id="623" color="offers">
+				<name>offers2</name>
+			</place>
+			<place id="641" color="offers,applications">
+				<name>Plink offers-applications</name>
+			</place>
+			<place id="642" color="offers">
+				<name>Pb offers</name>
+			</place>
+			<place id="643" color="applications">
+				<name>Pb applications</name>
+			</place>
+			<place id="644" color="offers">
+				<name>Pa offers</name>
+			</place>
+			<place id="645" color="applications">
+				<name>Pa applications</name>
+			</place>
+			<transition id="607" invisible="true">
+				<name>create applications</name>
+			</transition>
+			<transition id="611" invisible="true">
+				<name>consume applications</name>
+			</transition>
+			<transition id="616" invisible="true">
+				<name>consume offers</name>
+			</transition>
+			<transition id="622" invisible="true">
+				<name>create offers</name>
+			</transition>
+			<transition id="624">
+				<name>submit application</name>
+			</transition>
+			<transition id="625" invisible="true">
+				<name>f0de6de3-dcd7-4135-ac5b-7a74c9f82cad</name>
+			</transition>
+			<transition id="626" invisible="true">
+				<name>d01a3ab9-c612-4ba1-91ed-c20db73851ed</name>
+			</transition>
+			<transition id="627">
+				<name>assign recruiter</name>
+			</transition>
+			<transition id="628" invisible="true">
+				<name>ea322269-1266-4075-be52-766d158c49ba</name>
+			</transition>
+			<transition id="629" invisible="true">
+				<name>a79280c5-a979-4670-aaeb-59b624f249df</name>
+			</transition>
+			<transition id="630">
+				<name>invite for interview</name>
+			</transition>
+			<transition id="631">
+				<name>conduct interview</name>
+			</transition>
+			<transition id="632">
+				<name>send rejection</name>
+			</transition>
+			<transition id="633">
+				<name>make job offer</name>
+			</transition>
+			<transition id="634">
+				<name>assign vacancy</name>
+			</transition>
+			<transition id="635">
+				<name>consult manager</name>
+			</transition>
+			<transition id="636" invisible="true">
+				<name>ac41c68d-ff65-4c8d-8674-7d906abf4182</name>
+			</transition>
+			<transition id="637">
+				<name>offer accepted and hired</name>
+			</transition>
+			<transition id="638">
+				<name>check references</name>
+			</transition>
+			<transition id="639">
+				<name>job offer declined</name>
+			</transition>
+			<transition id="640">
+				<name>first screening</name>
+			</transition>
+			<transition id="646">
+				<name>Tlink offers-applications</name>
+			</transition>
+			<transition id="647" invisible="true">
+				<name>Ti offers</name>
+			</transition>
+			<transition id="648" invisible="true">
+				<name>Ti applications</name>
+			</transition>
+			<arc source="607" target="606" inscription="a:applications"/>
+			<arc source="610" target="611" inscription="a:applications"/>
+			<arc source="615" target="616" inscription="o:offers"/>
+			<arc source="622" target="621" inscription="o:offers"/>
+			<arc source="635" target="619" inscription="a:applications"/>
+			<arc source="633" target="623" inscription="o:offers"/>
+			<arc source="632" target="610" inscription="a:applications"/>
+			<arc source="605" target="637" inscription="a:applications"/>
+			<arc source="620" target="635" inscription="a:applications"/>
+			<arc source="634" target="603" inscription="a:applications"/>
+			<arc source="618" target="628" inscription="a:applications"/>
+			<arc source="625" target="612" inscription="a:applications"/>
+			<arc source="631" target="612" inscription="a:applications"/>
+			<arc source="637" target="610" inscription="a:applications"/>
+			<arc source="640" target="618" inscription="a:applications"/>
+			<arc source="609" target="626" inscription="a:applications"/>
+			<arc source="612" target="632" inscription="a:applications"/>
+			<arc source="614" target="629" inscription="a:applications"/>
+			<arc source="609" target="634" inscription="a:applications"/>
+			<arc source="628" target="604" inscription="a:applications"/>
+			<arc source="639" target="615" inscription="o:offers"/>
+			<arc source="603" target="640" inscription="a:applications"/>
+			<arc source="608" target="627" inscription="a:applications"/>
+			<arc source="630" target="617" inscription="a:applications"/>
+			<arc source="626" target="603" inscription="a:applications"/>
+			<arc source="613" target="630" inscription="a:applications"/>
+			<arc source="627" target="609" inscription="a:applications"/>
+			<arc source="633" target="605" inscription="a:applications"/>
+			<arc source="604" target="638" inscription="a:applications"/>
+			<arc source="619" target="629" inscription="a:applications"/>
+			<arc source="623" target="637" inscription="o:offers"/>
+			<arc source="637" target="615" inscription="o:offers"/>
+			<arc source="618" target="625" inscription="a:applications"/>
+			<arc source="613" target="636" inscription="a:applications"/>
+			<arc source="636" target="612" inscription="a:applications"/>
+			<arc source="606" target="624" inscription="a:applications"/>
+			<arc source="638" target="614" inscription="a:applications"/>
+			<arc source="617" target="631" inscription="a:applications"/>
+			<arc source="612" target="633" inscription="a:applications"/>
+			<arc source="624" target="608" inscription="a:applications"/>
+			<arc source="629" target="613" inscription="a:applications"/>
+			<arc source="639" target="610" inscription="a:applications"/>
+			<arc source="628" target="620" inscription="a:applications"/>
+			<arc source="605" target="639" inscription="a:applications"/>
+			<arc source="621" target="633" inscription="o:offers"/>
+			<arc source="623" target="639" inscription="o:offers"/>
+			<arc source="647" target="642" inscription="nu_o:offers"/>
+			<arc source="648" target="643" inscription="nu_a:applications"/>
+			<arc source="642" target="646" inscription="O:offers"/>
+			<arc source="643" target="646" inscription="a:applications"/>
+			<arc source="646" target="641" inscription="O:offers,a:applications"/>
+			<arc source="641" target="616" inscription="o:offers,a:applications"/>
+			<arc source="646" target="644" inscription="O:offers"/>
+			<arc source="646" target="645" inscription="a:applications"/>
+			<arc source="645" target="607" inscription="a:applications"/>
+			<arc source="644" target="622" inscription="o:offers"/>
+			<arc source="641" target="633" inscription="O:offers,a:applications"/>
+			<arc source="633" target="641" inscription="O:offers,a:applications"/>
+			<arc source="641" target="637" inscription="O:offers,a:applications"/>
+			<arc source="637" target="641" inscription="O:offers,a:applications"/>
+			<arc source="641" target="639" inscription="O:offers,a:applications"/>
+			<arc source="639" target="641" inscription="O:offers,a:applications"/>
+		</page>
+	</net>
+</pnml>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+	<net>
+		<page>
+			<name>recruiting-red</name>
+			<place id="565" color="applications">
+				<name>applications1</name>
+			</place>
+			<place id="566" color="applications">
+				<name>applications3</name>
+			</place>
+			<place id="567" color="applications">
+				<name>applications5</name>
+			</place>
+			<place id="568" color="applications">
+				<name>applications6</name>
+			</place>
+			<place id="570" color="applications">
+				<name>applications7</name>
+			</place>
+			<place id="571" color="applications">
+				<name>applications8</name>
+			</place>
+			<place id="572" color="applications">
+				<name>applications9</name>
+			</place>
+			<place id="574" color="applications">
+				<name>applications10</name>
+			</place>
+			<place id="575" color="applications">
+				<name>applications11</name>
+			</place>
+			<place id="576" color="applications">
+				<name>applications12</name>
+			</place>
+			<place id="577" color="offers">
+				<name>offers3</name>
+			</place>
+			<place id="579" color="applications">
+				<name>applications14</name>
+			</place>
+			<place id="580" color="applications">
+				<name>applications2</name>
+			</place>
+			<place id="581" color="applications">
+				<name>applications4</name>
+			</place>
+			<place id="582" color="applications">
+				<name>applications13</name>
+			</place>
+			<place id="583" color="offers">
+				<name>offers1</name>
+			</place>
+			<place id="585" color="offers">
+				<name>offers2</name>
+			</place>
+			<transition id="569" invisible="true">
+				<name>create applications</name>
+			</transition>
+			<transition id="573" invisible="true">
+				<name>consume applications</name>
+			</transition>
+			<transition id="578" invisible="true">
+				<name>consume offers</name>
+			</transition>
+			<transition id="584" invisible="true">
+				<name>create offers</name>
+			</transition>
+			<transition id="586">
+				<name>submit application</name>
+			</transition>
+			<transition id="587" invisible="true">
+				<name>f0de6de3-dcd7-4135-ac5b-7a74c9f82cad</name>
+			</transition>
+			<transition id="588" invisible="true">
+				<name>d01a3ab9-c612-4ba1-91ed-c20db73851ed</name>
+			</transition>
+			<transition id="589">
+				<name>assign recruiter</name>
+			</transition>
+			<transition id="590" invisible="true">
+				<name>ea322269-1266-4075-be52-766d158c49ba</name>
+			</transition>
+			<transition id="591" invisible="true">
+				<name>a79280c5-a979-4670-aaeb-59b624f249df</name>
+			</transition>
+			<transition id="592">
+				<name>invite for interview</name>
+			</transition>
+			<transition id="593">
+				<name>conduct interview</name>
+			</transition>
+			<transition id="594">
+				<name>send rejection</name>
+			</transition>
+			<transition id="595">
+				<name>make job offer</name>
+			</transition>
+			<transition id="596">
+				<name>assign vacancy</name>
+			</transition>
+			<transition id="597">
+				<name>consult manager</name>
+			</transition>
+			<transition id="598" invisible="true">
+				<name>ac41c68d-ff65-4c8d-8674-7d906abf4182</name>
+			</transition>
+			<transition id="599">
+				<name>offer accepted and hired</name>
+			</transition>
+			<transition id="600">
+				<name>check references</name>
+			</transition>
+			<transition id="601">
+				<name>job offer declined</name>
+			</transition>
+			<transition id="602">
+				<name>first screening</name>
+			</transition>
+			<arc source="569" target="568" inscription="nu_a:applications"/>
+			<arc source="572" target="573" inscription="a:applications"/>
+			<arc source="577" target="578" inscription="o:offers"/>
+			<arc source="584" target="583" inscription="nu_o:offers"/>
+			<arc source="597" target="581" inscription="a:applications"/>
+			<arc source="595" target="585" inscription="o:offers"/>
+			<arc source="594" target="572" inscription="a:applications"/>
+			<arc source="567" target="599" inscription="a:applications"/>
+			<arc source="582" target="597" inscription="a:applications"/>
+			<arc source="596" target="565" inscription="a:applications"/>
+			<arc source="580" target="590" inscription="a:applications"/>
+			<arc source="587" target="574" inscription="a:applications"/>
+			<arc source="593" target="574" inscription="a:applications"/>
+			<arc source="599" target="572" inscription="a:applications"/>
+			<arc source="602" target="580" inscription="a:applications"/>
+			<arc source="571" target="588" inscription="a:applications"/>
+			<arc source="574" target="594" inscription="a:applications"/>
+			<arc source="576" target="591" inscription="a:applications"/>
+			<arc source="571" target="596" inscription="a:applications"/>
+			<arc source="590" target="566" inscription="a:applications"/>
+			<arc source="601" target="577" inscription="o:offers"/>
+			<arc source="565" target="602" inscription="a:applications"/>
+			<arc source="570" target="589" inscription="a:applications"/>
+			<arc source="592" target="579" inscription="a:applications"/>
+			<arc source="588" target="565" inscription="a:applications"/>
+			<arc source="575" target="592" inscription="a:applications"/>
+			<arc source="589" target="571" inscription="a:applications"/>
+			<arc source="595" target="567" inscription="a:applications"/>
+			<arc source="566" target="600" inscription="a:applications"/>
+			<arc source="581" target="591" inscription="a:applications"/>
+			<arc source="585" target="599" inscription="o:offers"/>
+			<arc source="599" target="577" inscription="o:offers"/>
+			<arc source="580" target="587" inscription="a:applications"/>
+			<arc source="575" target="598" inscription="a:applications"/>
+			<arc source="598" target="574" inscription="a:applications"/>
+			<arc source="568" target="586" inscription="a:applications"/>
+			<arc source="600" target="576" inscription="a:applications"/>
+			<arc source="579" target="593" inscription="a:applications"/>
+			<arc source="574" target="595" inscription="a:applications"/>
+			<arc source="586" target="570" inscription="a:applications"/>
+			<arc source="591" target="575" inscription="a:applications"/>
+			<arc source="601" target="572" inscription="a:applications"/>
+			<arc source="590" target="582" inscription="a:applications"/>
+			<arc source="567" target="601" inscription="a:applications"/>
+			<arc source="583" target="595" inscription="o:offers"/>
+			<arc source="585" target="601" inscription="o:offers"/>
+		</page>
+	</net>
+</pnml>
